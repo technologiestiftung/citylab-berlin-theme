@@ -1,0 +1,31 @@
+{
+  "name": "@technologiestiftung/citylab-berlin-theme",
+  "version": "0.0.1",
+  "description": "TailwindCSS utilities for styling CityLAB Berlin websites and apps ",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "theme",
+    "TailwindCSS"
+  ],
+  "author": "Dennis Ostendorf",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technologiestiftung/citylab-berlin-theme"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-run-script": "^2.2.1",
+    "autoprefixer": "^10.1.0",
+    "postcss-cli": "^8.3.1",
+    "snowpack": "^2.18.4",
+    "tailwindcss": "^2.0.2"
+  }
+}
