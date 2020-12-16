@@ -1,0 +1,14 @@
+{
+  "mount": {
+    "public": "/"
+  },
+  "plugins": [
+    [
+      "@snowpack/plugin-run-script",
+      {
+        "cmd": "postcss src/style.css -o public/style.compiled.css",
+        "watch": "postcss src/style.css -o public/style.compiled.css -w"
+      }
+    ]
+  ]
+}
