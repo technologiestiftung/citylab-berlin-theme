@@ -12,15 +12,15 @@ This styling package comes with two utilities.
 ## --- WORK IN PROGRESS ---
 
 - [x] Write first README documentation
-- [ ] Add `base` styles (maybe use _water.css_ as an inpiration)
+- [x] Provide dev instructions
 - [x] Find a way to provide the custom webfonts or provide explanation how to include them
 - [x] Provide basic assets (just the CityLAB logo at the moment)
-- [ ] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
 - [x] Use @ts-check in JS files
+- [ ] Add `base` styles (maybe use _water.css_ as an inpiration)
 - [ ] Review which kind of license makes sense
 - [ ] Create demo site or section in README for theme options (e.g. color shades)
-- [x] provide dev instructions
 - [ ] Publish theme as a package
+- [ ] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
 
 ## Requirements
 
