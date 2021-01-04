@@ -19,6 +19,7 @@ This styling package comes with two utilities.
 - [x] Use @ts-check in JS files
 - [ ] Review which kind of license makes sense
 - [ ] Create demo site or section in README for theme options (e.g. color shades)
+- [x] provide dev instructions
 - [ ] Publish theme as a package
 
 ## Requirements
@@ -57,3 +58,19 @@ module.exports = {
 ### Start styling!
 
 You can start writing your markup, add Tailwind classes, add your own theme that will merge with this one, etc. Have fun!
+
+## Developing
+
+In order to work on this theme, first make sure to install all dependencies:
+
+```bash
+npm install
+```
+
+You can start a local development server with:
+
+```bash
+npm run dev
+```
+
+`src/theme.js` and `src/base.js` are the files which define the theme and the base styles. A simple "demo" of all available base styles can be found in `public/index.html`, served on `localhost:8080`.

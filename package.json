@@ -4,7 +4,7 @@
   "description": "TailwindCSS utilities for styling CityLAB Berlin websites and apps",
   "main": "index.js",
   "scripts": {
-    "start": "snowpack dev",
+    "dev": "snowpack dev",
     "build": "snowpack build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
