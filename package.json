@@ -21,6 +21,12 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+  "files": [
+    "index.js",
+    "src/base.js",
+    "src/theme.js",
+    "public/assets/citylab_logo.svg"
+  ],
   "devDependencies": {
     "@snowpack/plugin-run-script": "^2.2.1",
     "autoprefixer": "^10.1.0",

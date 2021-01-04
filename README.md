@@ -14,6 +14,7 @@ This styling package comes with two utilities.
 - [x] Write first README documentation
 - [ ] Add `base` styles (maybe use _water.css_ as an inpiration)
 - [ ] Find a way to provide the custom webfonts or provide explanation tow to include them
+- [x] Provide basic assets (just the CityLAB logo at the moment)
 - [ ] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
 - [x] Use @ts-check in JS files
 - [ ] Review which kind of license makes sense
