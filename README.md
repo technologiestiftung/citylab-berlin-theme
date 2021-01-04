@@ -30,7 +30,7 @@ This styling package comes with two utilities.
 
 ## Installation
 
-Create a `.nmprc` file at your project root with the following content:
+Create a `.npmrc` file at your project root with the following content:
 
 ```
 @dnsos:registry=https://npm.pkg.github.com
