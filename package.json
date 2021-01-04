@@ -1,5 +1,5 @@
 {
-  "name": "@technologiestiftung/citylab-berlin-theme",
+  "name": "@dnsos/citylab-berlin-theme",
   "version": "0.0.1",
   "description": "TailwindCSS utilities for styling CityLAB Berlin websites and apps",
   "main": "index.js",
