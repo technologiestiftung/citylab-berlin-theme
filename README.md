@@ -13,7 +13,7 @@ This styling package comes with two utilities.
 
 - [x] Write first README documentation
 - [ ] Add `base` styles (maybe use _water.css_ as an inpiration)
-- [ ] Find a way to provide the custom webfonts or provide explanation tow to include them
+- [x] Find a way to provide the custom webfonts or provide explanation how to include them
 - [x] Provide basic assets (just the CityLAB logo at the moment)
 - [ ] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
 - [x] Use @ts-check in JS files
@@ -29,7 +29,7 @@ This styling package comes with two utilities.
 
 ## Installation
 
-### Create a `.nmprc` file at your project root with the following content:
+Create a `.nmprc` file at your project root with the following content:
 
 ```js
 @technologiestiftung=https://npm.pkg.github.com/
@@ -37,27 +37,47 @@ This styling package comes with two utilities.
 
 > As the theme is currently published to the GitHub Packages registry, we need to tell NPM where to look for it. All other packages from NPM can be installed as usual.
 
-### Install the theme package as a `devDependency`
+Install the theme package as a `devDependency`
 
 ```bash
 npm install -D @technologiestiftung/citylab-berlin-theme
 ```
 
-### Import and use styling utilities in your `tailwind.config.js`
+Import and use styling utilities in your `tailwind.config.js`
 
 ```js
 const { theme, base } = require("@technologiestiftung/citylab-berlin-theme");
 
 module.exports = {
   presets: [theme],
-  plugins: [base],
+  plugins: [base], // <- optional
   // other settings
 };
 ```
 
-### Start styling!
-
 You can start writing your markup, add Tailwind classes, add your own theme that will merge with this one, etc. Have fun!
+
+### One more thing!
+
+If you want to use the CityLAB Berlin font (called _National_), you will have to add it to your project manually. Before doing so, make sure you have the rights for using the font according to your license.
+
+Define the custom font in your root CSS file like so:
+
+```css
+@font-face {
+  font-family: "National Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local("National Regular"),
+    url(assets/fonts/NationalWeb-Regular.woff2) format("woff2"), url(assets/fonts/NationalWeb-Regular.woff)
+      format("woff");
+}
+/* ... */
+```
+
+> Example can be found in `src/style.css`. Remember to change the paths to your font files!
+
+> Also described in the [Tailwind docs](https://tailwindcss.com/docs/adding-base-styles#font-face-rules).
 
 ## Developing
 

@@ -118,3 +118,4 @@ dist
 # Custom stuff following
 build/
 public/style.compiled.css
+public/assets/fonts/

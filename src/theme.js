@@ -1,6 +1,11 @@
 // @ts-check
 module.exports = {
   theme: {
+    /*
+    -----------------------------------------
+    Styles that override Tailwind's default theme
+    -----------------------------------------
+    */
     colors: {
       primary: {
         50: "#feedf1",
@@ -39,15 +44,32 @@ module.exports = {
         900: "#0b0c13",
       },
       white: "#fff",
-      extend: {
-        fontFamily: {
-          sans: [
-            //"National Regular",
-            "Helvetica Neue",
-            "system-ui",
-            "sans-serif",
-          ],
-        },
+    },
+    fontFamily: {
+      serif: {},
+    },
+    /*
+    -----------------------------------------
+    Styles that will be merged with Tailwind's default theme
+    -----------------------------------------
+    */
+    extend: {
+      fontFamily: {
+        sans: [
+          "National Regular",
+          "Calibri",
+          "Segoe UI",
+          "Roboto",
+          "Oxygen",
+          "Ubuntu",
+          "Cantarell",
+          "Fira Sans",
+          "Droid Sans",
+          "Helvetica Neue",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
       },
     },
   },

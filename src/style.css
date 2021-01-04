@@ -8,32 +8,32 @@
     font-style: normal;
     font-weight: 400;
     src: local("National Regular"),
-      url(fonts/NationalWeb-Regular.woff2) format("woff2"),
-      url(fonts/NationalWeb-Regular.woff) format("woff");
+      url(assets/fonts/NationalWeb-Regular.woff2) format("woff2"),
+      url(assets/fonts/NationalWeb-Regular.woff) format("woff");
   }
   @font-face {
     font-family: "National Regular";
     font-style: italic;
     font-weight: 400;
     src: local("National Regular Italic"),
-      url(fonts/NationalWeb-RegularItalic.woff2) format("woff2"),
-      url(fonts/NationalWeb-RegularItalic.woff) format("woff");
+      url(assets/fonts/NationalWeb-RegularItalic.woff2) format("woff2"),
+      url(assets/fonts/NationalWeb-RegularItalic.woff) format("woff");
   }
   @font-face {
     font-family: "National Regular";
     font-style: normal;
     font-weight: 800;
     src: local("National Extrabold"),
-      url(fonts/NationalWeb-Extrabold.woff2) format("woff2"),
-      url(fonts/NationalWeb-Extrabold.woff) format("woff");
+      url(assets/fonts/NationalWeb-Extrabold.woff2) format("woff2"),
+      url(assets/fonts/NationalWeb-Extrabold.woff) format("woff");
   }
   @font-face {
     font-family: "National Regular";
     font-style: italic;
     font-weight: 800;
     src: local("National Extrabold Italic"),
-      url(fonts/NationalWeb-ExtraboldItalic.woff2) format("woff2"),
-      url(fonts/NationalWeb-ExtraboldItalic.woff) format("woff");
+      url(assets/fonts/NationalWeb-ExtraboldItalic.woff2) format("woff2"),
+      url(assets/fonts/NationalWeb-ExtraboldItalic.woff) format("woff");
   }
   address {
     @apply text-base not-italic;
