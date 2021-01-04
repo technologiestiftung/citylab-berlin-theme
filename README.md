@@ -32,8 +32,8 @@ This styling package comes with two utilities.
 
 Create a `.nmprc` file at your project root with the following content:
 
-```js
-@technologiestiftung=https://npm.pkg.github.com/
+```
+@dnsos:registry=https://npm.pkg.github.com
 ```
 
 > As the theme is currently published to the GitHub Packages registry, we need to tell NPM where to look for it. All other packages from NPM can be installed as usual.
@@ -41,13 +41,13 @@ Create a `.nmprc` file at your project root with the following content:
 Install the theme package as a `devDependency`
 
 ```bash
-npm install -D @technologiestiftung/citylab-berlin-theme
+npm install -D @dnsos/citylab-berlin-theme
 ```
 
 Import and use styling utilities in your `tailwind.config.js`
 
 ```js
-const { theme, base } = require("@technologiestiftung/citylab-berlin-theme");
+const { theme, base } = require("@dnsos/citylab-berlin-theme");
 
 module.exports = {
   presets: [theme],
