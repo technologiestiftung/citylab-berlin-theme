@@ -76,11 +76,11 @@ module.exports = plugin(function ({ addBase, theme }) {
   -----------------------------------------
   */
   addBase({
-    "p, h1, h2, h3, h4, h5, h6, blockquote, button": {
+    /* "p, h1, h2, h3, h4, h5, h6, blockquote, button": {
       "&:not(:first-child)": {
         marginTop: theme("margin[5]"),
       },
-    },
+    }, */
   });
   /*
   -----------------------------------------
