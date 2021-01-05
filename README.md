@@ -17,7 +17,7 @@ This styling package comes with two utilities.
 - [x] Provide basic assets (just the CityLAB logo at the moment)
 - [x] Use @ts-check in JS files
 - [x] Create workflow to publish package upon new release
-- [ ] Update scope from dnsos to technologiestiftung
+- [x] Update scope from dnsos to technologiestiftung
 - [ ] Add `base` styles (maybe use _water.css_ as an inpiration)
 - [ ] Review which kind of license makes sense
 - [ ] Create demo site or section in README for theme options (e.g. color shades)
