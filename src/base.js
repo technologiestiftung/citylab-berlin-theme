@@ -1,6 +1,7 @@
 // @ts-check
 const plugin = require("tailwindcss/plugin");
 
+// @ts-ignore
 module.exports = plugin(function ({ addBase, theme }) {
   /*
   -----------------------------------------
@@ -38,6 +39,16 @@ module.exports = plugin(function ({ addBase, theme }) {
         color: theme("colors.secondary.500"),
       },
     },
+    "blockquote > footer, figcaption": {
+      color: theme("colors.secondary.300"),
+    },
+    code: {
+      backgroundColor: theme("colors.secondary.50"),
+    },
+    mark: {
+      color: theme("colors.white"),
+      backgroundColor: theme("colors.primary.500"),
+    },
   });
   /*
   -----------------------------------------
@@ -69,37 +80,51 @@ module.exports = plugin(function ({ addBase, theme }) {
     "p, blockquote, h1, h2, h3, h4, h5, h6": {
       maxWidth: theme("maxWidth.prose"),
     },
+    "b, strong": {
+      fontWeight: theme("fontWeight.extrabold"),
+    },
+    "em, i, q, blockquote": {
+      fontStyle: "italic",
+    },
+    "blockquote > footer, figcaption": {
+      fontSize: theme("fontSize.base"),
+      fontStyle: "normal",
+    },
+    code: {
+      fontSize: theme("fontSize.base"),
+    },
+    address: {
+      fontSize: theme("fontSize.base"),
+      fontStyle: "normal",
+    },
+    "ul, ol": {
+      listStylePosition: "inside",
+    },
+    ul: {
+      listStyleType: theme("listStyleType.disc"),
+    },
+    ol: {
+      listStyleType: theme("listStyleType.decimal"),
+    },
   });
   /*
   -----------------------------------------
   SPACING
   -----------------------------------------
   */
-  addBase({
-    /* "p, h1, h2, h3, h4, h5, h6, blockquote, button": {
-      "&:not(:first-child)": {
-        marginTop: theme("margin[5]"),
-      },
-    }, */
-  });
   /*
   -----------------------------------------
   ELEMENTS
   -----------------------------------------
   */
   addBase({
-    "header, footer": {
-      padding: theme("padding[4]"),
-      backgroundColor: theme("colors.white"),
-      borderColor: theme("colors.secondary.50"),
-    },
     header: {
       position: "sticky",
       top: theme("spacing[0]"),
+      padding: theme("padding[4]"),
+      backgroundColor: theme("colors.white"),
+      borderColor: theme("colors.secondary.50"),
       borderBottomWidth: theme("borderWidth[2]"),
-    },
-    footer: {
-      borderTopWidth: theme("borderWidth[2]"),
     },
     button: {
       paddingTop: theme("padding[2]"),
@@ -114,6 +139,11 @@ module.exports = plugin(function ({ addBase, theme }) {
       "&:hover": {
         backgroundColor: theme("colors.primary.400"),
       },
+    },
+    blockquote: {
+      paddingLeft: theme("padding[4]"),
+      borderLeftWidth: theme("borderWidth[2]"),
+      borderColor: theme("colors.secondary.300"),
     },
   });
 });

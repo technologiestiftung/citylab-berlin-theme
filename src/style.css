@@ -35,30 +35,10 @@
       url(assets/fonts/NationalWeb-ExtraboldItalic.woff2) format("woff2"),
       url(assets/fonts/NationalWeb-ExtraboldItalic.woff) format("woff");
   }
-  address {
-    @apply text-base not-italic;
-  }
   a {
     @apply focus:ring-2 focus:ring-secondary-500;
   }
-  b,
-  strong {
-    @apply font-extrabold;
-  }
-  i,
-  em {
-    @apply italic;
-  }
-  mark {
-    @apply text-white bg-primary-500;
-  }
-  q {
-    @apply italic;
-  }
-  blockquote {
-    @apply pl-4 italic border-l-2 border-secondary-300;
-  }
-  code {
-    @apply text-base bg-secondary-50;
+  main > *:not(:first-child) {
+    @apply mt-5;
   }
 }
