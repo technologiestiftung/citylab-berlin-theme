@@ -1,5 +1,5 @@
 {
-  "name": "@dnsos/citylab-berlin-theme",
+  "name": "@technologiestiftung/citylab-berlin-theme",
   "version": "0.0.2",
   "description": "TailwindCSS utilities for styling CityLAB Berlin websites and apps",
   "main": "index.js",
@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dnsos/citylab-berlin-theme"
+    "url": "git+https://github.com/technologiestiftung/citylab-berlin-theme"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
