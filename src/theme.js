@@ -7,7 +7,7 @@ module.exports = {
     -----------------------------------------
     */
     colors: {
-      primary: {
+      magenta: {
         50: "#feedf1",
         100: "#fddbe3",
         200: "#fbb7c7",
@@ -19,7 +19,7 @@ module.exports = {
         800: "#621e2e",
         900: "#310f17",
       },
-      secondary: {
+      blue: {
         50: "#eaeaf6",
         100: "#d5d5ec",
         200: "#acacda",
@@ -32,6 +32,7 @@ module.exports = {
         900: "#090920",
       },
       gray: {
+        25: "#f5f5f7",
         50: "#ebebef",
         100: "#d7d8df",
         200: "#b0b0bf",
