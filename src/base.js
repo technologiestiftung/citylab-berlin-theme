@@ -31,13 +31,14 @@ module.exports = plugin(function ({ addBase, theme }) {
       color: theme("colors.magenta.500"),
     },
     a: {
-      color: theme("colors.magenta.500"),
-      borderColor: theme("colors.magenta.500"),
+      color: theme("colors.blue.500"),
+      borderColor: theme("colors.magenta.300"),
       transitionProperty: theme("transitionProperty.colors"),
       transitionDuration: theme("transitionDuration.DEFAULT"),
       transitionTimingFunction: theme("transitionTimingFunction.DEFAULT"),
       "&:hover": {
-        color: theme("colors.magenta.400"),
+        color: theme("colors.magenta.500"),
+        borderColor: theme("colors.magenta.400"),
       },
     },
     button: {
@@ -172,6 +173,9 @@ module.exports = plugin(function ({ addBase, theme }) {
       backgroundColor: theme("colors.white"),
       borderBottomWidth: theme("borderWidth[2]"),
       zIndex: theme("zIndex.50"),
+    },
+    a: {
+      borderBottomWidth: theme("borderWidth[2]"),
     },
     button: {
       paddingTop: theme("padding[2]"),
