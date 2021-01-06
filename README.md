@@ -18,7 +18,7 @@ This styling package comes with two utilities.
 - [x] Use @ts-check in JS files
 - [x] Create workflow to publish package upon new release
 - [x] Update scope from dnsos to technologiestiftung
-- [ ] Add `base` styles (maybe use _water.css_ as an inpiration)
+- [x] Add `base` styles (maybe use _water.css_ as an inpiration)
 - [ ] Only provide mobile-first `base` styles (responsiveness issue in Tailwind preset)
 - [ ] Create focus styles
 - [ ] Review which kind of license makes sense
