@@ -22,7 +22,7 @@ This styling package comes with two utilities.
 - [x] Only provide mobile-first `base` styles (responsiveness issue in Tailwind preset)
 - [x] Create focus styles
 - [ ] Review which kind of license makes sense
-- [ ] Create demo site or section in README for theme options (e.g. color shades)
+- [ ] Create a how-to-use-this demo site (including other common stuff like favicons etc.)
 - [x] Publish theme as a package
 - [ ] Test utilities in other codebases (React, 11ty, etc.)
 
