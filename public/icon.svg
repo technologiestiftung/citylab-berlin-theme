@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <style>
+    @media (prefers-color-scheme: dark) { rect { fill: #ffffff; } }
+  </style>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="512" height="512" fill="transparent"></rect>
+    <polygon fill="#F64C72" fill-rule="nonzero" points="309.26 354 233 309.448 234.452 110.307 390.119 19 464 62.316 463.698 262.726"/>
+    <polygon fill="#393A61" fill-rule="nonzero" points="233 82.082 208.349 96.741 207.706 185.888 120.209 237.927 119.045 400 48 357.917 49.444 157.081 204.27 65"/>
+    <polygon fill="#2F2FA2" fill-rule="nonzero" points="212.853 204 212.047 316.295 306.07 371.952 372 332.471 371.905 400.435 217.323 493 141 447.815 142.453 245.846"/>
+  </g>
+</svg>
