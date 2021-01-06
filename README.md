@@ -23,7 +23,7 @@ This styling package comes with two utilities.
 - [x] Create focus styles
 - [ ] Review which kind of license makes sense
 - [ ] Create demo site or section in README for theme options (e.g. color shades)
-- [ ] Publish theme as a package
+- [x] Publish theme as a package
 - [ ] Test utilities in other codebases (React, 11ty, etc.)
 
 For later:
