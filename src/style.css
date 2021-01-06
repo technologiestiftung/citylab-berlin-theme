@@ -39,8 +39,9 @@
   button,
   input,
   textarea,
-  select {
-    @apply focus:ring-2 focus:ring-blue-500;
+  select,
+  summary {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-magenta-500;
   }
   main > *:not(:first-child) {
     @apply mt-5;

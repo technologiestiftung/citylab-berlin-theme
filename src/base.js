@@ -14,9 +14,6 @@ module.exports = plugin(function ({ addBase, theme }) {
       "-webkit-font-smoothing": "antialiased",
       "-moz-osx-font-smoothing": "grayscale",
     },
-    "*:focus": {
-      outline: theme("outline.none"),
-    },
   });
   /*
   -----------------------------------------
@@ -26,6 +23,9 @@ module.exports = plugin(function ({ addBase, theme }) {
   addBase({
     body: {
       color: theme("colors.blue.500"),
+    },
+    header: {
+      borderColor: theme("colors.blue.50"),
     },
     "h1, h2": {
       color: theme("colors.magenta.500"),
@@ -39,15 +39,28 @@ module.exports = plugin(function ({ addBase, theme }) {
         color: theme("colors.blue.500"),
       },
     },
-    "blockquote > footer, figcaption": {
-      color: theme("colors.blue.300"),
+    button: {
+      color: theme("colors.white"),
+      backgroundColor: theme("colors.magenta.500"),
+      transitionProperty: theme("transitionProperty.colors"),
+      transitionDuration: theme("transitionDuration.DEFAULT"),
+      transitionTimingFunction: theme("transitionTimingFunction.DEFAULT"),
+      "&:hover": {
+        backgroundColor: theme("colors.magenta.400"),
+      },
+    },
+    blockquote: {
+      borderColor: theme("colors.blue.50"),
+      "& > footer, figcaption": {
+        color: theme("colors.blue.300"),
+      },
     },
     code: {
       backgroundColor: theme("colors.blue.50"),
     },
     mark: {
       color: theme("colors.white"),
-      backgroundColor: theme("colors.magenta.500"),
+      backgroundColor: theme("colors.blue.500"),
     },
     label: {
       color: theme("colors.gray.500"),
@@ -66,6 +79,19 @@ module.exports = plugin(function ({ addBase, theme }) {
           opacity: theme("opacity.20"),
         },
       },
+    },
+    details: {
+      color: theme("colors.magenta.500"),
+      "& > summary:hover": {
+        color: theme("colors.magenta.400"),
+        cursor: "pointer",
+      },
+      "& > summary ~ *": {
+        color: theme("colors.blue.500"),
+      },
+    },
+    hr: {
+      borderColor: theme("colors.blue.50"),
     },
   });
   /*
@@ -127,6 +153,9 @@ module.exports = plugin(function ({ addBase, theme }) {
     input: {
       fontSize: theme("fontSize.lg"),
     },
+    "summary ~ *": {
+      fontSize: theme("fontSize.base"),
+    },
   });
   /*
   -----------------------------------------
@@ -139,7 +168,6 @@ module.exports = plugin(function ({ addBase, theme }) {
       top: theme("spacing[0]"),
       padding: theme("padding[4]"),
       backgroundColor: theme("colors.white"),
-      borderColor: theme("colors.blue.50"),
       borderBottomWidth: theme("borderWidth[2]"),
       zIndex: theme("zIndex.50"),
     },
@@ -148,19 +176,10 @@ module.exports = plugin(function ({ addBase, theme }) {
       paddingBottom: theme("padding[3]"),
       paddingLeft: theme("padding[3]"),
       paddingRight: theme("padding[3]"),
-      color: theme("colors.white"),
-      backgroundColor: theme("colors.magenta.500"),
-      transitionProperty: theme("transitionProperty.colors"),
-      transitionDuration: theme("transitionDuration.DEFAULT"),
-      transitionTimingFunction: theme("transitionTimingFunction.DEFAULT"),
-      "&:hover": {
-        backgroundColor: theme("colors.magenta.400"),
-      },
     },
     blockquote: {
       paddingLeft: theme("padding[4]"),
       borderLeftWidth: theme("borderWidth[2]"),
-      borderColor: theme("colors.blue.300"),
     },
     "input:not([type=checkbox]):not([type=radio]), textarea, select": {
       display: "block",
@@ -172,6 +191,12 @@ module.exports = plugin(function ({ addBase, theme }) {
     },
     input: {
       verticalAlign: "middle",
+    },
+    summary: {
+      display: "inline-block",
+    },
+    hr: {
+      borderTopWidth: theme("borderWidth[2]"),
     },
   });
 });

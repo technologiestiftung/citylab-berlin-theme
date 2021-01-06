@@ -20,6 +20,7 @@ This styling package comes with two utilities.
 - [x] Update scope from dnsos to technologiestiftung
 - [ ] Add `base` styles (maybe use _water.css_ as an inpiration)
 - [ ] Only provide mobile-first `base` styles (responsiveness issue in Tailwind preset)
+- [ ] Create focus styles
 - [ ] Review which kind of license makes sense
 - [ ] Create demo site or section in README for theme options (e.g. color shades)
 - [ ] Publish theme as a package
