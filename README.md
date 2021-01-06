@@ -24,10 +24,12 @@ This styling package comes with two utilities.
 - [ ] Review which kind of license makes sense
 - [ ] Create demo site or section in README for theme options (e.g. color shades)
 - [ ] Publish theme as a package
+- [ ] Test utilities in other codebases (React, 11ty, etc.)
 
 For later:
 
 - [ ] Create styled (and accessible) radio/checkbox inputs and select
+- [ ] Review why FF and Safari don't focus links (generally)
 - [ ] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
 
 ## Requirements
