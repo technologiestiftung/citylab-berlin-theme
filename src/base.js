@@ -14,6 +14,20 @@ module.exports = plugin(function ({ addBase, theme }) {
       "-webkit-font-smoothing": "antialiased",
       "-moz-osx-font-smoothing": "grayscale",
     },
+    // custom focus styles
+    "a, input, textarea, button, select, summary": {
+      "&:focus": {
+        outline: "none",
+        "--tw-ring-offset-shadow":
+          "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
+        "--tw-ring-shadow":
+          "var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
+        boxShadow:
+          "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
+        "--tw-ring-opacity": "1",
+        "--tw-ring-color": "rgba(253, 219, 227, var(--tw-ring-opacity))",
+      },
+    },
   });
   /*
   -----------------------------------------
