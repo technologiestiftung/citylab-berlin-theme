@@ -35,8 +35,12 @@
       url(assets/fonts/NationalWeb-ExtraboldItalic.woff2) format("woff2"),
       url(assets/fonts/NationalWeb-ExtraboldItalic.woff) format("woff");
   }
-  a {
-    @apply focus:ring-2 focus:ring-secondary-500;
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    @apply focus:ring-2 focus:ring-blue-500;
   }
   main > *:not(:first-child) {
     @apply mt-5;

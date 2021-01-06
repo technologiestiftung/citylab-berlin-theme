@@ -19,9 +19,14 @@ This styling package comes with two utilities.
 - [x] Create workflow to publish package upon new release
 - [x] Update scope from dnsos to technologiestiftung
 - [ ] Add `base` styles (maybe use _water.css_ as an inpiration)
+- [ ] Only provide mobile-first `base` styles (responsiveness issue in Tailwind preset)
 - [ ] Review which kind of license makes sense
 - [ ] Create demo site or section in README for theme options (e.g. color shades)
 - [ ] Publish theme as a package
+
+For later:
+
+- [ ] Create styled (and accessible) radio/checkbox inputs and select
 - [ ] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
 
 ## Requirements

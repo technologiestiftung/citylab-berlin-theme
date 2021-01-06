@@ -36,20 +36,114 @@
         mitwirken möchtest, kontaktiere uns ganz unkompliziert oder komm direkt
         im <a href="#">CityLAB</a> vorbei.
       </p>
+      <form action="POST" class="sm:w-96 p-5 shadow-lg">
+        <fieldset>
+          <div>
+            <label for="newsletter-firstname">
+              Vorname
+              <input
+                type="text"
+                name="newsletter"
+                id="newsletter-firstname"
+                placeholder="Dein Vorname"
+              />
+            </label>
+          </div>
+          <div>
+            <label for="newsletter-laststname">
+              Nachname
+              <input
+                type="text"
+                name="newsletter"
+                id="newsletter-laststname"
+                placeholder="Dein Nachname"
+                disabled
+              />
+            </label>
+          </div>
+          <div>
+            <label for="newsletter-email">
+              E-Mail-Adresse*
+              <input
+                type="text"
+                name="newsletter"
+                id="newsletter-email"
+                placeholder="Deine E-Mail-Adresse"
+              />
+            </label>
+          </div>
+          <div>
+            <label for="newsletter-comment">Kommentar</label>
+            <textarea
+              name="newsletter"
+              id="newsletter-comment"
+              cols="30"
+              rows="10"
+              placeholder="Einen Kommentar schreiben ..."
+            ></textarea>
+          </div>
+          <div class="mt-4">
+            <label>Wähle einen E-Mail-Rythmus:</label>
+            <div>
+              <input
+                type="radio"
+                name="newsletter-frequency"
+                id="newsletter-frequency-weekly"
+                value="weekly"
+                checked
+              />
+              <label for="newsletter-frequency-weekly">Wöchentlich</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="newsletter-frequency"
+                id="newsletter-frequency-biweekly"
+                value="biweekly"
+                disabled
+              />
+              <label for="newsletter-frequency-biweekly">Zweiwöchentlich</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="newsletter-frequency"
+                id="newsletter-frequency-monthly"
+                value="monthly"
+              />
+              <label for="newsletter-frequency-monthly">Monatlich</label>
+            </div>
+          </div>
+          <div class="mt-4">
+            <input type="checkbox" name="" id="newsletter-consent" required />
+            <label for="newsletter-consent"
+              >Ich bin damit einverstanden, E-Mails zu erhalten.</label
+            >
+          </div>
+        </fieldset>
+        <button type="submit" class="mt-4">Anmelden</button>
+      </form>
       <ul>
         <li>Unordered list element</li>
         <li>Unordered list element</li>
         <li>Unordered list element</li>
       </ul>
+      <div class="sm:w-96">
+        <label for="district-select">Bitte wähle einen Bezirk:</label>
+        <select name="bezirke" id="district-select">
+          <option value="all">Alle Bezirke</option>
+          <option value="t-s">Tempelhof-Schöneberg</option>
+          <option value="f-k">Friedrichshain-Kreuzberg</option>
+          <option value="m">Mitte</option>
+        </select>
+      </div>
       <blockquote>
         <p>
           Du planst einen kreativen Workshop, ein Meetup oder eine öffentliche
           Veranstaltung zur digitalen Stadt? Nutze unsere Räume im ehemaligen
           Flughafen Tempelhof.
         </p>
-        <footer>
-          Von der Website des <cite>CityLAB Berlin</cite>
-        </footer>
+        <footer>Von der Website des <cite>CityLAB Berlin</cite></footer>
       </blockquote>
       <h2>Heading 2</h2>
       <ol>
@@ -87,7 +181,7 @@
       </figure>
       <button>Simple button</button>
     </main>
-    <footer class="p-4 border-t-2 border-secondary-50">
+    <footer class="p-4 border-t-2 border-blue-50">
       <address>
         <a href="https://www.google.de/maps/@52.4843705,13.3836835,16.65z"
           >Platz der Luftbrücke 4 <br />12101 Berlin</a

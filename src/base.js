@@ -25,29 +25,47 @@ module.exports = plugin(function ({ addBase, theme }) {
   */
   addBase({
     body: {
-      color: theme("colors.secondary.500"),
+      color: theme("colors.blue.500"),
     },
     "h1, h2": {
-      color: theme("colors.primary.500"),
+      color: theme("colors.magenta.500"),
     },
     a: {
-      color: theme("colors.secondary.400"),
+      color: theme("colors.blue.400"),
       transitionProperty: theme("transitionProperty.colors"),
       transitionDuration: theme("transitionDuration.DEFAULT"),
       transitionTimingFunction: theme("transitionTimingFunction.DEFAULT"),
       "&:hover": {
-        color: theme("colors.secondary.500"),
+        color: theme("colors.blue.500"),
       },
     },
     "blockquote > footer, figcaption": {
-      color: theme("colors.secondary.300"),
+      color: theme("colors.blue.300"),
     },
     code: {
-      backgroundColor: theme("colors.secondary.50"),
+      backgroundColor: theme("colors.blue.50"),
     },
     mark: {
       color: theme("colors.white"),
-      backgroundColor: theme("colors.primary.500"),
+      backgroundColor: theme("colors.magenta.500"),
+    },
+    label: {
+      color: theme("colors.gray.500"),
+    },
+    "input, textarea, select": {
+      color: theme("colors.gray.500"),
+      backgroundColor: theme("colors.gray.25"),
+      "&::placeholder": {
+        color: theme("colors.gray.300"),
+      },
+    },
+    "input, textarea, select, optgroup": {
+      "&:disabled": {
+        opacity: theme("opacity.50"),
+        "& ~ label": {
+          opacity: theme("opacity.20"),
+        },
+      },
     },
   });
   /*
@@ -106,12 +124,10 @@ module.exports = plugin(function ({ addBase, theme }) {
     ol: {
       listStyleType: theme("listStyleType.decimal"),
     },
+    input: {
+      fontSize: theme("fontSize.lg"),
+    },
   });
-  /*
-  -----------------------------------------
-  SPACING
-  -----------------------------------------
-  */
   /*
   -----------------------------------------
   ELEMENTS
@@ -123,8 +139,9 @@ module.exports = plugin(function ({ addBase, theme }) {
       top: theme("spacing[0]"),
       padding: theme("padding[4]"),
       backgroundColor: theme("colors.white"),
-      borderColor: theme("colors.secondary.50"),
+      borderColor: theme("colors.blue.50"),
       borderBottomWidth: theme("borderWidth[2]"),
+      zIndex: theme("zIndex.50"),
     },
     button: {
       paddingTop: theme("padding[2]"),
@@ -132,18 +149,29 @@ module.exports = plugin(function ({ addBase, theme }) {
       paddingLeft: theme("padding[3]"),
       paddingRight: theme("padding[3]"),
       color: theme("colors.white"),
-      backgroundColor: theme("colors.primary.500"),
+      backgroundColor: theme("colors.magenta.500"),
       transitionProperty: theme("transitionProperty.colors"),
       transitionDuration: theme("transitionDuration.DEFAULT"),
       transitionTimingFunction: theme("transitionTimingFunction.DEFAULT"),
       "&:hover": {
-        backgroundColor: theme("colors.primary.400"),
+        backgroundColor: theme("colors.magenta.400"),
       },
     },
     blockquote: {
       paddingLeft: theme("padding[4]"),
       borderLeftWidth: theme("borderWidth[2]"),
-      borderColor: theme("colors.secondary.300"),
+      borderColor: theme("colors.blue.300"),
+    },
+    "input:not([type=checkbox]):not([type=radio]), textarea, select": {
+      display: "block",
+      width: theme("width.full"),
+      paddingTop: theme("padding[2]"),
+      paddingBottom: theme("padding[2]"),
+      paddingLeft: theme("padding[2]"),
+      paddingRight: theme("padding[2]"),
+    },
+    input: {
+      verticalAlign: "middle",
     },
   });
 });
