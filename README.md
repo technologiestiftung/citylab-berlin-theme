@@ -28,6 +28,7 @@ This styling package comes with two utilities.
 
 For later:
 
+- [ ] Consider dark theme support
 - [ ] Create styled (and accessible) radio/checkbox inputs and select
 - [ ] Review why FF and Safari don't focus links (generally)
 - [ ] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
