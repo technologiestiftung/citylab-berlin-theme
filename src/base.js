@@ -31,12 +31,13 @@ module.exports = plugin(function ({ addBase, theme }) {
       color: theme("colors.magenta.500"),
     },
     a: {
-      color: theme("colors.blue.400"),
+      color: theme("colors.magenta.500"),
+      borderColor: theme("colors.magenta.500"),
       transitionProperty: theme("transitionProperty.colors"),
       transitionDuration: theme("transitionDuration.DEFAULT"),
       transitionTimingFunction: theme("transitionTimingFunction.DEFAULT"),
       "&:hover": {
-        color: theme("colors.blue.500"),
+        color: theme("colors.magenta.400"),
       },
     },
     button: {
@@ -104,10 +105,10 @@ module.exports = plugin(function ({ addBase, theme }) {
       fontSize: theme("fontSize.xl"),
     },
     h1: {
-      fontSize: theme("fontSize.4xl"),
+      fontSize: theme("fontSize.3xl"),
     },
     h2: {
-      fontSize: theme("fontSize.3xl"),
+      fontSize: theme("fontSize.2xl"),
     },
     h3: {
       fontSize: theme("fontSize.2xl"),
@@ -117,6 +118,7 @@ module.exports = plugin(function ({ addBase, theme }) {
     },
     h5: {
       fontSize: theme("fontSize.lg"),
+      fontWeight: theme("fontWeight.extrabold"),
     },
     h6: {
       fontSize: theme("fontSize.lg"),
