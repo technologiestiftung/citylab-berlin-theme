@@ -24,7 +24,7 @@ This styling package comes with two utilities.
 - [ ] Review which kind of license makes sense
 - [ ] Create a how-to-use-this demo site (including other common stuff like favicons etc.)
 - [x] Publish theme as a package
-- [ ] Test utilities in other codebases (React, 11ty, etc.)
+- [x] Test utilities in other codebases (React, 11ty, etc.)
 
 For later:
 
