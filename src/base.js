@@ -117,6 +117,7 @@ module.exports = plugin(function ({ addBase, theme }) {
   */
   addBase({
     body: {
+      fontFamily: theme("fontFamily.sans"),
       fontSize: theme("fontSize.xl"),
     },
     h1: {
