@@ -2,6 +2,13 @@
   "mount": {
     "public": "/"
   },
+  "exclude": [
+    ".gitignore",
+    ".nvmrc",
+    "package.json",
+    "package-lock.json",
+    "renovate.json"
+  ],
   "plugins": [
     [
       "@snowpack/plugin-run-script",
