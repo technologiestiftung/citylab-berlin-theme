@@ -25,13 +25,15 @@ This styling package comes with two utilities.
 - [ ] Create a how-to-use-this demo site (including other common stuff like favicons etc.)
 - [x] Publish theme as a package
 - [x] Test utilities in other codebases (React, 11ty, etc.)
+- [x] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
+- [ ] Test vanilla CSS stylesheet in another project
+- [ ] Update README to include vanilla CSS option
 
 For later:
 
 - [ ] Consider dark theme support
 - [ ] Create styled (and accessible) radio/checkbox inputs and select
 - [ ] Review why FF and Safari don't focus links (generally)
-- [x] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
 
 ## Requirements
 
