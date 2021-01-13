@@ -36,7 +36,7 @@ For vanilla CSS installation instructions, see [here](#vanilla-css-installation)
 - [x] Publish theme as a package
 - [x] Test utilities in other codebases (React, 11ty, etc.)
 - [x] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
-- [ ] Test vanilla CSS stylesheet in another project
+- [x] Test vanilla CSS stylesheet in another project
 - [x] Update README to include vanilla CSS option
 
 For later:
