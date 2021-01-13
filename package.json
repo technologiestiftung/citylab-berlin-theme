@@ -1,12 +1,14 @@
 {
   "name": "@technologiestiftung/citylab-berlin-theme",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "TailwindCSS utilities for styling CityLAB Berlin websites and apps",
   "main": "index.js",
   "scripts": {
     "dev": "snowpack dev",
     "build": "snowpack build",
-    "prepublishOnly": "NODE_ENV=publish postcss src/style.css -o index.css"
+    "prepublishOnly": "mkdir -p assets && npm run prepare:logo && npm run prepare:css",
+    "prepare:css": "NODE_ENV=publish postcss src/style.css -o assets/style.css",
+    "prepare:logo": "cp public/assets/citylab_logo.svg assets/citylab_logo.svg"
   },
   "keywords": [
     "theme",
@@ -25,8 +27,8 @@
     "index.js",
     "src/base.js",
     "src/theme.js",
-    "public/assets/citylab_logo.svg",
-    "index.css"
+    "assets/citylab_logo.svg",
+    "assets/style.css"
   ],
   "devDependencies": {
     "@snowpack/plugin-run-script": "^2.2.1",

@@ -120,5 +120,5 @@ build/
 public/style.compiled.css
 public/assets/fonts/
 
-# Package's vanilla CSS file (shouldn't show up locally, but just in case)
-style.css
+# Package's assets (shouldn't show up locally, but just in case)
+assets/**/*
