@@ -3,37 +3,43 @@
 @tailwind utilities;
 
 @layer base {
+  /* everything in here will be included in the packagedvanilla CSS stylesheet */
   @font-face {
     font-family: "National Regular";
     font-style: normal;
     font-weight: 400;
     src: local("National Regular"),
-      url(assets/fonts/NationalWeb-Regular.woff2) format("woff2"),
-      url(assets/fonts/NationalWeb-Regular.woff) format("woff");
+      url(/assets/fonts/NationalWeb-Regular.woff2) format("woff2"),
+      url(/assets/fonts/NationalWeb-Regular.woff) format("woff");
   }
   @font-face {
     font-family: "National Regular";
     font-style: italic;
     font-weight: 400;
     src: local("National Regular Italic"),
-      url(assets/fonts/NationalWeb-RegularItalic.woff2) format("woff2"),
-      url(assets/fonts/NationalWeb-RegularItalic.woff) format("woff");
+      url(/assets/fonts/NationalWeb-RegularItalic.woff2) format("woff2"),
+      url(/assets/fonts/NationalWeb-RegularItalic.woff) format("woff");
   }
   @font-face {
     font-family: "National Regular";
     font-style: normal;
     font-weight: 800;
     src: local("National Extrabold"),
-      url(assets/fonts/NationalWeb-Extrabold.woff2) format("woff2"),
-      url(assets/fonts/NationalWeb-Extrabold.woff) format("woff");
+      url(/assets/fonts/NationalWeb-Extrabold.woff2) format("woff2"),
+      url(/assets/fonts/NationalWeb-Extrabold.woff) format("woff");
   }
   @font-face {
     font-family: "National Regular";
     font-style: italic;
     font-weight: 800;
     src: local("National Extrabold Italic"),
-      url(assets/fonts/NationalWeb-ExtraboldItalic.woff2) format("woff2"),
-      url(assets/fonts/NationalWeb-ExtraboldItalic.woff) format("woff");
+      url(/assets/fonts/NationalWeb-ExtraboldItalic.woff2) format("woff2"),
+      url(/assets/fonts/NationalWeb-ExtraboldItalic.woff) format("woff");
+  }
+  main,
+  header,
+  footer {
+    @apply p-4;
   }
   main > *:not(:first-child) {
     @apply mt-5;

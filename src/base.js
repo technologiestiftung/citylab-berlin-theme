@@ -184,7 +184,6 @@ module.exports = plugin(function ({ addBase, theme }) {
     header: {
       position: "sticky",
       top: theme("spacing[0]"),
-      padding: theme("padding[4]"),
       backgroundColor: theme("colors.white"),
       borderBottomWidth: theme("borderWidth[2]"),
       zIndex: theme("zIndex.50"),
