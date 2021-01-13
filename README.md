@@ -19,32 +19,6 @@ If you prefer to not use Tailwind, a vanilla CSS stylesheet is provided for simp
 
 For vanilla CSS installation instructions, see [here](#vanilla-css-installation).
 
-## --- WORK IN PROGRESS, PLEASE IGNORE ---
-
-- [x] Write first README documentation
-- [x] Provide dev instructions
-- [x] Find a way to provide the custom webfonts or provide explanation how to include them
-- [x] Provide basic assets (just the CityLAB logo at the moment)
-- [x] Use @ts-check in JS files
-- [x] Create workflow to publish package upon new release
-- [x] Update scope from dnsos to technologiestiftung
-- [x] Add `base` styles (maybe use _water.css_ as an inpiration)
-- [x] Only provide mobile-first `base` styles (responsiveness issue in Tailwind preset)
-- [x] Create focus styles
-- [ ] Review which kind of license makes sense
-- [ ] Create a how-to-use-this demo site (including other common stuff like favicons etc.)
-- [x] Publish theme as a package
-- [x] Test utilities in other codebases (React, 11ty, etc.)
-- [x] Provide vanilla CSS stylesheet for projects that do not use TailwindCSS
-- [x] Test vanilla CSS stylesheet in another project
-- [x] Update README to include vanilla CSS option
-
-For later:
-
-- [ ] Consider dark theme support
-- [ ] Create styled (and accessible) radio/checkbox inputs and select
-- [ ] Review why FF and Safari don't focus links (generally)
-
 ## Requirements
 
 - Node.js >= 14.14.0 _(other versions may work, but are not tested)_
@@ -144,3 +118,8 @@ npm run dev
 ```
 
 `src/theme.js` and `src/base.js` are the files which define the theme and the base styles. A simple "demo" of all available base styles can be found in `public/index.html`, served on `localhost:8080`.
+
+## Next steps
+
+- [ ] Add license
+- [ ] Create a how-to-use-this demo site (including other common stuff like favicons etc.)
