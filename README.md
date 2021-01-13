@@ -82,7 +82,7 @@ There are no special requirements for using the CSS stylesheet in a project. Sim
 @import url("node_modules/@technologiestiftung/citylab-berlin-theme/assets/style.css");
 ```
 
-In order to include the _National_ font family, create a folder `assets/fonts/` and add the relevant font files. The stylesheet will then be able top find them.
+In order to include the _National_ font family, create a folder `assets/fonts/` and add the relevant font files. The stylesheet will then be able to find them.
 
 ### CityLAB Berlin logo
 
