@@ -4,210 +4,405 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CityLAB Berlin Theme</title>
-    <link rel="manifest" href="/manifest.webmanifest">
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="stylesheet" type="text/css" href="style.compiled.css" />
   </head>
   <body>
-    <header>
+    <header class="w-full flex">
       <img
         src="assets/citylab_logo.svg"
         alt="CityLAB Berlin Logo"
         class="inline-block"
       />
-      <h1 class="inline-block mt-0 ml-3 text-2xl">Styling Utilities</h1>
+      <section class="w-full flex flex-wrap place-content-between mt-0 ml-3">
+        <p class="text-magenta-500 text-2xl">Styling Utilities</p>
+        <p>
+          <a
+            href="https://github.com/technologiestiftung/citylab-berlin-theme/packages/560085"
+            >v0.0.6</a
+          >
+        </p>
+      </section>
     </header>
-    <main>
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
-      <h2>Heading 2</h2>
-      <p>
-        Im CityLAB wird Innovation und Partizipation zusammen­gedacht:
-        <i>Verwaltung und Stadtgesellschaft</i> arbeiten hier gemeinsam an
-        Lösungen für <b>das digitale Berlin von Morgen</b>.
-      </p>
-      <h2>Heading 2</h2>
-      <p>
-        Veranstaltung, Co-Working oder eigene Idee weiterentwickeln: das
-        <a href="#">CityLAB</a> ist ein Ort der <mark>Kollaboration</mark>. Wenn
-        du bei den Themen
-        <q>Civic Tech, GovTech, sozialer Innovation und Smart Cities</q>
-        mitwirken möchtest, kontaktiere uns ganz unkompliziert oder komm direkt
-        im <a href="#">CityLAB</a> vorbei.
-      </p>
-      <form action="POST" class="sm:w-96 p-5 shadow-lg">
-        <fieldset>
-          <div>
-            <label for="newsletter-firstname">
-              Vorname
-              <input
-                type="text"
-                name="newsletter"
-                id="newsletter-firstname"
-                placeholder="Dein Vorname"
-              />
-            </label>
-          </div>
-          <div>
-            <label for="newsletter-laststname">
-              Nachname
-              <input
-                type="text"
-                name="newsletter"
-                id="newsletter-laststname"
-                placeholder="Dein Nachname"
-                disabled
-              />
-            </label>
-          </div>
-          <div>
-            <label for="newsletter-email">
-              E-Mail-Adresse*
-              <input
-                type="text"
-                name="newsletter"
-                id="newsletter-email"
-                placeholder="Deine E-Mail-Adresse"
-              />
-            </label>
-          </div>
-          <div>
-            <label for="newsletter-comment">Kommentar</label>
-            <textarea
-              name="newsletter"
-              id="newsletter-comment"
-              cols="30"
-              rows="10"
-              placeholder="Einen Kommentar schreiben ..."
-            ></textarea>
-          </div>
-          <div class="mt-4">
-            <label>Wähle einen E-Mail-Rythmus:</label>
-            <div>
-              <input
-                type="radio"
-                name="newsletter-frequency"
-                id="newsletter-frequency-weekly"
-                value="weekly"
-                checked
-              />
-              <label for="newsletter-frequency-weekly">Wöchentlich</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="newsletter-frequency"
-                id="newsletter-frequency-biweekly"
-                value="biweekly"
-                disabled
-              />
-              <label for="newsletter-frequency-biweekly">Zweiwöchentlich</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="newsletter-frequency"
-                id="newsletter-frequency-monthly"
-                value="monthly"
-              />
-              <label for="newsletter-frequency-monthly">Monatlich</label>
-            </div>
-          </div>
-          <hr class="mt-4" />
-          <div class="mt-4">
-            <input type="checkbox" name="" id="newsletter-consent" required />
-            <label for="newsletter-consent"
-              >Ich bin damit einverstanden, E-Mails zu erhalten.</label
+    <main class="max-w-screen-lg mx-auto">
+      <h1 class="text-5xl mt-8">
+        Documentation of the CityLAB Berlin styling utilities for TailwindCSS
+      </h1>
+      <code
+        class="inline-block bg-magenta-50 text-magenta-500 text-sm p-1 mt-4 uppercase tracking-wider"
+        >alpha</code
+      >
+      <article class="mt-8">
+        <h2>Table of Contents</h2>
+        <ol class="list-inside list-decimal">
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#theme">Theme</a></li>
+          <li><a href="#base-styles">Base styles</a></li>
+        </ol>
+      </article>
+      <article id="installation" class="mt-32">
+        <h2 class="text-4xl">Installation</h2>
+        <pre class="mt-4">
+echo "@technologiestiftung:registry=https://npm.pkg.github.com" > .npmrc
+        </pre>
+        <pre class="mt-4">
+npm install -D @technologiestiftung/citylab-berlin-theme
+        </pre>
+        <pre class="mt-4">
+// tailwind.config.js
+const { theme, base } = require("@technologiestiftung/citylab-berlin-theme");
+
+module.exports = {
+  presets: [theme],
+  plugins: [base], // <- optional
+  // other settings
+}; 
+        </pre>
+        <p class="mt-4">
+          More detailed installation and usage instructions can be found in the
+          <a href="https://github.com/technologiestiftung/citylab-berlin-theme"
+            >GitHub repository</a
+          >.
+        </p>
+      </article>
+      <article id="theme" class="mt-32">
+        <section>
+          <h2 class="text-4xl">Theme</h2>
+          <p>
+            The provided <code class="text-base">theme</code> preset is an
+            extension of the
+            <a
+              href="https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js"
+              >default Tailwind theme</a
             >
-          </div>
-        </fieldset>
-        <button type="submit" class="mt-4">Anmelden</button>
-      </form>
-      <ul>
-        <li>Unordered list element</li>
-        <li>Unordered list element</li>
-        <li>Unordered list element</li>
-      </ul>
-      <div class="sm:w-96">
-        <label for="district-select">Bitte wähle einen Bezirk:</label>
-        <select name="bezirke" id="district-select">
-          <option value="all">Alle Bezirke</option>
-          <option value="t-s">Tempelhof-Schöneberg</option>
-          <option value="f-k">Friedrichshain-Kreuzberg</option>
-          <option value="m">Mitte</option>
-        </select>
-      </div>
-      <blockquote>
+            and comes with the following customizations.
+          </p>
+        </section>
+        <section class="grid md:grid-cols-4 gap-12 mt-16">
+          <section class="col-span-1">
+            <h3><code>colors</code></h3>
+            <p class="text-base">
+              Four colors are available in different shades.
+            </p>
+          </section>
+          <section class="col-span-3">
+            <hr />
+            <h4 class="font-normal mt-2"><code>magenta</code></h4>
+            <ul class="flex flex-wrap mt-4">
+              <li>
+                <div class="bg-magenta-50 w-24 h-24"></div>
+                <code>50</code>
+              </li>
+              <li>
+                <div class="bg-magenta-100 w-24 h-24"></div>
+                <code>100</code>
+              </li>
+              <li>
+                <div class="bg-magenta-200 w-24 h-24"></div>
+                <code>200</code>
+              </li>
+              <li>
+                <div class="bg-magenta-300 w-24 h-24"></div>
+                <code>300</code>
+              </li>
+              <li>
+                <div class="bg-magenta-400 w-24 h-24"></div>
+                <code>400</code>
+              </li>
+              <li>
+                <div class="bg-magenta-500 w-24 h-24"></div>
+                <code>500</code>
+              </li>
+            </ul>
+            <hr class="mt-8" />
+            <h4 class="font-normal mt-2"><code>blue</code></h4>
+            <ul class="flex flex-wrap mt-4">
+              <li>
+                <div class="bg-blue-50 w-24 h-24"></div>
+                <code>50</code>
+              </li>
+              <li>
+                <div class="bg-blue-100 w-24 h-24"></div>
+                <code>100</code>
+              </li>
+              <li>
+                <div class="bg-blue-200 w-24 h-24"></div>
+                <code>200</code>
+              </li>
+              <li>
+                <div class="bg-blue-300 w-24 h-24"></div>
+                <code>300</code>
+              </li>
+              <li>
+                <div class="bg-blue-400 w-24 h-24"></div>
+                <code>400</code>
+              </li>
+              <li>
+                <div class="bg-blue-500 w-24 h-24"></div>
+                <code>500</code>
+              </li>
+            </ul>
+            <hr class="mt-8" />
+            <h4 class="font-normal mt-2"><code>gray</code></h4>
+            <ul class="flex flex-wrap mt-4">
+              <li>
+                <div class="bg-gray-50 w-24 h-24"></div>
+                <code>50</code>
+              </li>
+              <li>
+                <div class="bg-gray-100 w-24 h-24"></div>
+                <code>100</code>
+              </li>
+              <li>
+                <div class="bg-gray-200 w-24 h-24"></div>
+                <code>200</code>
+              </li>
+              <li>
+                <div class="bg-gray-300 w-24 h-24"></div>
+                <code>300</code>
+              </li>
+              <li>
+                <div class="bg-gray-400 w-24 h-24"></div>
+                <code>400</code>
+              </li>
+              <li>
+                <div class="bg-gray-500 w-24 h-24"></div>
+                <code>500</code>
+              </li>
+              <li>
+                <div class="bg-gray-600 w-24 h-24"></div>
+                <code>600</code>
+              </li>
+              <li>
+                <div class="bg-gray-700 w-24 h-24"></div>
+                <code>700</code>
+              </li>
+              <li>
+                <div class="bg-gray-800 w-24 h-24"></div>
+                <code>800</code>
+              </li>
+              <li>
+                <div class="bg-gray-900 w-24 h-24"></div>
+                <code>900</code>
+              </li>
+            </ul>
+            <hr class="mt-8" />
+            <h4 class="font-normal mt-2"><code>white</code></h4>
+            <div class="bg-white border border-gray-100 w-24 h-24 mt-4"></div>
+            <hr class="mt-8" />
+          </section>
+        </section>
+        <section class="grid md:grid-cols-4 gap-12 mt-16">
+          <section class="col-span-1">
+            <h3><code>fontFamily</code></h3>
+            <p class="text-base">
+              The primary font family is a set of sans-serif fonts. A monospace
+              font family is available with
+              <code class="text-sm">monospace</code>.
+            </p>
+          </section>
+          <section class="col-span-3">
+            <h4><code>sans</code></h4>
+            <div class="bg-blue-50 p-1 mt-2">
+              <code
+                >"National Regular", "Calibri", "Segoe UI", "Roboto", "Oxygen",
+                "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica
+                Neue", "Helvetica", "Arial", "sans-serif"</code
+              >
+            </div>
+          </section>
+        </section>
+      </article>
+      <article id="base-styles" class="mt-32">
+        <h2 class="text-4xl">Base styles</h2>
         <p>
-          Du planst einen kreativen Workshop, ein Meetup oder eine öffentliche
-          Veranstaltung zur digitalen Stadt? Nutze unsere Räume im ehemaligen
-          Flughafen Tempelhof.
+          The <code class="text-base">base</code> plugin provides some basic
+          styling for HTML elements. See some examples here:
         </p>
-        <footer>Von der Website des <cite>CityLAB Berlin</cite></footer>
-      </blockquote>
-      <h2>Heading 2</h2>
-      <ol>
-        <li>Ordered list element</li>
-        <li>Ordered list element</li>
-        <li>Ordered list element</li>
-      </ol>
-      <details class="sm:w-96">
-        <summary>Eine Summary</summary>
-        <p>
-          Ein langer Details-Text. Ein langer Details-Text. Ein langer
-          Details-Text. Ein langer Details-Text.
-        </p>
-      </details>
-      <p>
-        Du planst einen kreativen <mark>Workshop</mark>, ein Meetup oder eine
-        öffentliche Veranstaltung zur digitalen Stadt? Nutze unsere Räume im
-        ehemaligen <s>Flughafen</s> Tempelhof.
-      </p>
-      <p>
-        Das CityLAB bietet kostenlose Co-Working-Plätze für
-        gemeinwohlorientierte Projekte.
-        <code>docker run docker/hello-world</code> Werde Teil unserer Community
-        und bewirb dich für ein Co-Working Fellowship.
-      </p>
-      <p>
-        <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> =
-        <var>c<sup>2</sup></var>
-      </p>
-      <p>
-        Almost every developer's favorite molecule is
-        C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
-        "caffeine."
-      </p>
-      <figure>
-        <img
-          src="https://www.citylab-berlin.org/images/intro-preview.jpg"
-          alt="Entrance of the CityLAB Berlin"
-          class="w-80"
-        />
-        <figcaption>Entrance of the CityLAB Berlin</figcaption>
-      </figure>
-      <button>Simple button</button>
-    </main>
-    <footer class="border-t-2 border-blue-50">
-      <address>
-        <a
-          href="https://www.google.de/maps/@52.4843705,13.3836835,16.65z"
-          class="border-b-0"
-          >Platz der Luftbrücke 4 <br />12101 Berlin</a
-        ><br />
-        <a href="mailto:info@citylab-berlin.org" class="border-b-0"
-          >info@citylab-berlin.org</a
-        ><br />
-        <a href="tel:+4930959996410" class="border-b-0"
-          >+49(0) 30 95 99 96 410</a
+        <h3 class="mt-8">Typography</h3>
+        <div
+          class="inline-block w-full md:w-1/3 p-6 pt-3 mt-3 border-2 border-blue-50"
         >
-      </address>
+          <h1>Heading 1</h1>
+          <h2 class="mt-2">Heading 2</h2>
+          <h3 class="mt-2">Heading 3</h3>
+          <h4 class="mt-2">Heading 4</h4>
+          <h5 class="mt-2">Heading 5</h5>
+          <h6 class="mt-2">Heading 6</h6>
+        </div>
+        <div class="p-6 pt-3 mt-3 border-2 border-blue-50">
+          <p class="mt-3">
+            Lorem ipsum dolor sit <a href="#">link</a> amet, consectetur
+            adipisicing elit. Maiores quis <a href="#">another link</a> culpa
+            quos doloribus veritatis omnis alias reiciendis soluta hic quidem
+            repellendus unde vitae corporis quae esse eveniet sunt, dolores
+            dolorum?
+          </p>
+          <p class="mt-3">
+            Lorem ipsum dolor sit <strong>bolded</strong> amet, consectetur
+            adipisicing elit. Tempore neque unde, ex
+            <b>also bolded</b> reprehenderit pariatur, voluptatibus molestiae
+            voluptate <i>italicized</i> aspernatur quaerat alias recusandae
+            saepe, voluptatum <em>also italicized</em> incidunt amet et totam
+            corporis id eos!
+          </p>
+          <p class="mt-3">
+            Lorem ipsum dolor sit amet <mark>text mark</mark> consectetur
+            adipisicing elit. Excepturi a
+            <q>This is a quote, this is a quote</q> maiores vero blanditiis
+            adipisci, perferendis nihil, dignissimos aliquid consequatur
+            voluptas dolorum rerum? Magnam, id nobis veniam corrupti perferendis
+            illo eum.
+          </p>
+          <p class="mt-3">
+            Lorem ipsum, dolor sit amet <s>strike-through</s> consectetur
+            adipisicing elit. Est reiciendis eligendi tenetur debitis corporis
+            sint amet blanditiis eaque, maiores hic laborum natus libero veniam
+            reprehenderit repudiandae sequi quidem possimus molestiae.
+          </p>
+          <p class="mt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> =
+            <var>c<sup>2</sup></var> / H<sub>2</sub>O
+          </p>
+          <blockquote class="mt-3">
+            <p>
+              This is a blockquote. This is a blockquote. This is a blockquote.
+              This is a blockquote.
+            </p>
+            <footer>This is a <cite>cite element</cite>.</footer>
+          </blockquote>
+        </div>
+        <h3 class="mt-8">Elements</h3>
+        <section class="max-w-sm">
+          <form action="POST" class="p-5 mt-5 border-2 border-blue-50">
+            <fieldset>
+              <div>
+                <label for="newsletter-firstname">
+                  First name
+                  <input
+                    type="text"
+                    name="newsletter"
+                    id="newsletter-firstname"
+                    placeholder="Your first name"
+                  />
+                </label>
+              </div>
+              <div>
+                <label for="newsletter-laststname">
+                  Last name
+                  <input
+                    type="text"
+                    name="newsletter"
+                    id="newsletter-laststname"
+                    placeholder="Your last name"
+                    disabled
+                  />
+                </label>
+              </div>
+              <div>
+                <label for="newsletter-email">
+                  E-mail address*
+                  <input
+                    type="text"
+                    name="newsletter"
+                    id="newsletter-email"
+                    placeholder="Your e-mail-address"
+                  />
+                </label>
+              </div>
+              <div>
+                <label for="newsletter-comment">Comment</label>
+                <textarea
+                  name="newsletter"
+                  id="newsletter-comment"
+                  cols="10"
+                  rows="5"
+                  placeholder="Add a comment ..."
+                ></textarea>
+              </div>
+              <div class="mt-4">
+                <label>Please select an e-mail rhythm:</label>
+                <div>
+                  <input
+                    type="radio"
+                    name="newsletter-frequency"
+                    id="newsletter-frequency-weekly"
+                    value="weekly"
+                    checked
+                  />
+                  <label for="newsletter-frequency-weekly">Weekly</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="newsletter-frequency"
+                    id="newsletter-frequency-biweekly"
+                    value="biweekly"
+                    disabled
+                  />
+                  <label for="newsletter-frequency-biweekly">Bi-weekly</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="newsletter-frequency"
+                    id="newsletter-frequency-monthly"
+                    value="monthly"
+                  />
+                  <label for="newsletter-frequency-monthly">Monthly</label>
+                </div>
+              </div>
+              <hr class="mt-4" />
+              <div class="mt-4">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="newsletter-consent"
+                  required
+                />
+                <label for="newsletter-consent"
+                  >I consent to receiving e-mails.</label
+                >
+              </div>
+            </fieldset>
+            <button type="submit" class="mt-4">Subscribe</button>
+          </form>
+          <div class="p-5 mt-5 border-2 border-blue-50">
+            <label for="district-select">Please select a district:</label>
+            <select name="bezirke" id="district-select">
+              <option value="all">All districts</option>
+              <option value="t-s">Tempelhof-Schöneberg</option>
+              <option value="f-k">Friedrichshain-Kreuzberg</option>
+              <option value="m">Mitte</option>
+            </select>
+          </div>
+          <div class="p-5 mt-5 border-2 border-blue-50">
+            <details>
+              <summary>Summary element</summary>
+              <p>
+                A longer details text on demand. A longer details text on
+                demand. A longer details text on demand. A longer details text
+                on demand.
+              </p>
+            </details>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer
+      class="border-t-2 border-blue-50 flex flex-wrap justify-start md:justify-end"
+    >
+      <p class="mr-4">For internal use only</p>
+      <a href="https://www.citylab-berlin.org/dataprivacy_en" class="mr-4"
+        >Data privacy</a
+      >
+      <a href="https://www.citylab-berlin.org/legalnote_en" class="mr-4"
+        >Imprint</a
+      >
     </footer>
   </body>
 </html>

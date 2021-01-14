@@ -117,9 +117,8 @@ You can start a local development server with:
 npm run dev
 ```
 
-`src/theme.js` and `src/base.js` are the files which define the theme and the base styles. A simple "demo" of all available base styles can be found in `public/index.html`, served on `localhost:8080`.
+`src/theme.js` and `src/base.js` are the files which define the theme and the base styles. The documentation of all available base styles can be found in `public/index.html`, served on `localhost:8080`.
 
 ## Next steps
 
 - [ ] Add license
-- [ ] Create a how-to-use-this demo site (including other common stuff like favicons etc.)
