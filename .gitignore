@@ -118,7 +118,6 @@ dist
 # Custom stuff following
 build/
 public/style.compiled.css
-public/assets/fonts/
 
 # Package's assets (shouldn't show up locally, but just in case)
 assets/**/*
