@@ -41,7 +41,7 @@ module.exports = plugin(function ({ addBase, theme }) {
     header: {
       borderColor: theme("colors.blue.50"),
     },
-    "h1, h2": {
+    "h1, h2, h3": {
       color: theme("colors.magenta.500"),
     },
     a: {
@@ -70,9 +70,6 @@ module.exports = plugin(function ({ addBase, theme }) {
       "& > footer, figcaption": {
         color: theme("colors.blue.300"),
       },
-    },
-    code: {
-      backgroundColor: theme("colors.blue.50"),
     },
     mark: {
       color: theme("colors.white"),
@@ -105,6 +102,9 @@ module.exports = plugin(function ({ addBase, theme }) {
       "& > summary ~ *": {
         color: theme("colors.blue.500"),
       },
+    },
+    pre: {
+      backgroundColor: theme("colors.gray.25"),
     },
     hr: {
       borderColor: theme("colors.blue.50"),
@@ -148,25 +148,16 @@ module.exports = plugin(function ({ addBase, theme }) {
     "em, i, q, blockquote": {
       fontStyle: "italic",
     },
-    "blockquote > footer, figcaption": {
+    "blockquote > *:not(:first-child), figcaption": {
       fontSize: theme("fontSize.base"),
       fontStyle: "normal",
     },
-    code: {
+    "pre, code": {
       fontSize: theme("fontSize.base"),
     },
     address: {
       fontSize: theme("fontSize.base"),
       fontStyle: "normal",
-    },
-    "ul, ol": {
-      listStylePosition: "inside",
-    },
-    ul: {
-      listStyleType: theme("listStyleType.disc"),
-    },
-    ol: {
-      listStyleType: theme("listStyleType.decimal"),
     },
     input: {
       fontSize: theme("fontSize.lg"),
@@ -214,6 +205,13 @@ module.exports = plugin(function ({ addBase, theme }) {
     },
     summary: {
       display: "inline-block",
+    },
+    pre: {
+      display: "inline-block",
+      paddingTop: theme("padding[2]"),
+      paddingBottom: theme("padding[2]"),
+      paddingLeft: theme("padding[2]"),
+      paddingRight: theme("padding[2]"),
     },
     hr: {
       borderTopWidth: theme("borderWidth[2]"),

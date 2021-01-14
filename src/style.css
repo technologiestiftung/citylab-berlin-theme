@@ -36,12 +36,9 @@
       url(/assets/fonts/NationalWeb-ExtraboldItalic.woff2) format("woff2"),
       url(/assets/fonts/NationalWeb-ExtraboldItalic.woff) format("woff");
   }
-  main,
-  header,
-  footer {
-    @apply p-4;
-  }
-  main > *:not(:first-child) {
-    @apply mt-5;
+  body > main,
+  body > header,
+  body > footer {
+    @apply p-6;
   }
 }
