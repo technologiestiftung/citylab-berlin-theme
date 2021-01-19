@@ -118,7 +118,3 @@ npm run dev
 ```
 
 `src/theme.js` and `src/base.js` are the files which define the theme and the base styles. The documentation of all available base styles can be found in `public/index.html`, served on `localhost:8080`.
-
-## Next steps
-
-- [ ] Add license
