@@ -31,13 +31,13 @@
     "assets/style.css"
   ],
   "devDependencies": {
-    "@snowpack/plugin-run-script": "2.2.1",
-    "autoprefixer": "10.1.0",
-    "cssnano": "4.1.10",
+    "@snowpack/plugin-run-script": "2.3.0",
+    "autoprefixer": "10.4.2",
+    "cssnano": "4.1.11",
     "postcss": "8.2.10",
     "postcss-cli": "8.3.1",
-    "snowpack": "3.0.11",
-    "tailwindcss": "2.0.2"
+    "snowpack": "3.8.8",
+    "tailwindcss": "2.2.19"
   },
   "engines": {
     "node": ">=12"
